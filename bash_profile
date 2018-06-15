@@ -1,6 +1,6 @@
 
 
-LOGIN_FOLDER="$HOME/.config/bash-hooks/login"
+LOGIN_FOLDER="$HOME/.local/share/bash-hooks/login"
 
 if [[ -e "$LOGIN_FOLDER" ]]
 then

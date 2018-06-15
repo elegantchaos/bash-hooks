@@ -1,6 +1,6 @@
 
 
-STARTUP_FOLDER="$HOME/.config/bash-hooks/startup"
+STARTUP_FOLDER="$HOME/.local/share/bash-hooks/startup"
 
 if [[ -e "$STARTUP_FOLDER" ]]
 then
