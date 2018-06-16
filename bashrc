@@ -25,4 +25,14 @@ then
     source "$HOME/.bashrc.backup"
 fi
 
+# If not running interactively exit now
+case $- in
+    *i*) ;;
+      *) return;;
+esac
+
+export BASH_HOOKS_INTERACTIVE=1
+source_folder "$BASH_HOOKS_ROOT/interactive"
+source_folder "$BASH_HOOKS_ROOT/interactive-$BASH_HOOKS_PLATFORM"
+
 fi
