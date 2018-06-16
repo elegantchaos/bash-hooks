@@ -1,8 +1,6 @@
 
-if [[ "$BASH_HOOKS_RC" == "1" ]]
+if [[ "$BASH_HOOKS_RC" == "" ]]
 then
-    exit
-fi
 
 export BASH_HOOKS_RC=1
 export BASH_HOOKS_PLATFORM=`uname`
@@ -25,4 +23,6 @@ source_folder "$BASH_HOOKS_ROOT/startup-$BASH_HOOKS_PLATFORM"
 if [[ -e "$HOME/.bashrc.backup" ]]
 then
     source "$HOME/.bashrc.backup"
+fi
+
 fi

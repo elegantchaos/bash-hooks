@@ -1,16 +1,17 @@
-
-
-LOGIN_FOLDER="$HOME/.local/share/bash-hooks/login"
-
-if [[ -e "$LOGIN_FOLDER" ]]
+if [[ -e "$HOME/.bashrc" ]]
 then
-    for f in "$LOGIN_FOLDER"/*
-    do
-        source "$f"
-    done
+    source "$HOME/.bashrc"
 fi
 
-if [[ -e "$HOME/.bash_profile.backup" ]]
+if [[ "$BASH_HOOKS_LOGIN" == "" ]]
 then
-    source "$HOME/.bash_profile.backup"
+    export BASH_HOOKS_LOGIN=1
+
+    source_folder "$BASH_HOOKS_ROOT/login"
+    source_folder "$BASH_HOOKS_ROOT/login-$BASH_HOOKS_PLATFORM"
+
+    if [[ -e "$HOME/.bash_profile.backup" ]]
+    then
+        source "$HOME/.bash_profile.backup"
+    fi
 fi
