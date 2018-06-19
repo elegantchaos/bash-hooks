@@ -4,7 +4,7 @@ then
 
 export BASH_HOOKS_RC=1
 export BASH_HOOKS_PLATFORM=`uname`
-export BASH_HOOKS_ROOT="$HOME/.local/share/bash-hooks/"
+export BASH_HOOKS_ROOT="$HOME/.local/share/bash-hooks"
 
 function source_folder() {
   FOLDER=$1
