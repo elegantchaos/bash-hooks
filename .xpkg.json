@@ -1,10 +1,6 @@
 {
-    "install": [
-        ["link", "bashrc", "~/.bashrc"],
-        ["link", "bash_profile", "~/.bash_profile"]
-    ],
-    "remove": [
-        ["unlink", "bashrc", "~/.bashrc"],
-        ["unlink", "bash_profile", "~/.bash_profile"]
+    "links": [
+        ["bashrc", "~/.bashrc"],
+        ["bash_profile", "~/.bash_profile"]
     ]
 }
