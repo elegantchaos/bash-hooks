@@ -24,5 +24,6 @@ then
     list_hooks "startup"
     list_hooks "interactive"
 else
- echo "Usage: bash-hooks list"
+    cmd=$(basename "$0")
+    echo "Usage: $cmd list"
 fi
