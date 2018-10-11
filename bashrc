@@ -36,6 +36,3 @@ source_folder "$BASH_HOOKS_ROOT/interactive"
 source_folder "$BASH_HOOKS_ROOT/interactive-$BASH_HOOKS_PLATFORM"
 
 fi
-
-# added by travis gem
-[ -f /Users/sam/.travis/travis.sh ] && source /Users/sam/.travis/travis.sh
