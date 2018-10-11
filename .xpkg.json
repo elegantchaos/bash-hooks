@@ -1,6 +1,7 @@
 {
     "links": [
         ["bashrc", "~/.bashrc"],
-        ["bash_profile", "~/.bash_profile"]
+        ["bash_profile", "~/.bash_profile"],
+        ["bash-hooks.sh", "~/.local/bin/hooks"],
     ]
 }
