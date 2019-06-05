@@ -3,12 +3,13 @@ then
     source "$HOME/.bashrc"
 fi
 
-if [[ "$BASH_HOOKS_LOGIN" == "" ]]
+if [[ "$SHELL_HOOKS_LOGIN" == "" ]]
 then
-    export BASH_HOOKS_LOGIN=1
+    export SHELL_HOOKS_LOGIN=1
+    export BASH_HOOKS_LOGIN=1 # legacy
 
-    source_hooks "$BASH_HOOKS_ROOT/login"
-    source_hooks "$BASH_HOOKS_ROOT/login-$BASH_HOOKS_PLATFORM"
+    source_hooks "$SHELL_HOOKS_ROOT/login"
+    source_hooks "$SHELL_HOOKS_ROOT/login-$SHELL_HOOKS_PLATFORM"
 
     if [[ -e "$HOME/.bash_profile.backup" ]]
     then

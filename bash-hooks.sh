@@ -1,15 +1,15 @@
 #!/usr/bin/env bash
 
 list_hooks () {
-    hooks="$BASH_HOOKS_ROOT/$1"
+    hooks="$SHELL_HOOKS_ROOT/$1"
     if [[ -e "$hooks" ]]
     then
         files=$(find "$hooks/"* -exec basename {} \;)
     fi
 
-    if [[ -e "$hooks-$BASH_HOOKS_PLATFORM" ]]
+    if [[ -e "$hooks-$SHELL_HOOKS_PLATFORM" ]]
     then
-        platform=$(find "$hooks-$BASH_HOOKS_PLATFORM/"* -exec basename {} \;)
+        platform=$(find "$hooks-$SHELL_HOOKS_PLATFORM/"* -exec basename {} \;)
     fi
 
     if [[ "$files$platform" != "" ]]

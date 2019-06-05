@@ -4,13 +4,19 @@
 # For licensing terms, see http://elegantchaos.com/license/liberal/.
 # -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
-if [[ "$BASH_HOOKS_RC" == "" ]]
+if [[ "$SHELL_HOOKS_RC" == "" ]]
 then
 
+
+export SHELL_HOOKS_RC=1
+export SHELL_HOOKS_PLATFORM=`uname`
+export SHELL_HOOKS_ROOT="$HOME/.local/share/bash-hooks"
+export SHELL_HOOKS_SHELL="zsh"
+
+# legacy
 export BASH_HOOKS_RC=1
 export BASH_HOOKS_PLATFORM=`uname`
 export BASH_HOOKS_ROOT="$HOME/.local/share/bash-hooks"
-export BASH_HOOKS_SHELL="zsh"
 
 # Source a hook
 # Before sourcing, we change the working directory to the true
@@ -36,8 +42,8 @@ export function source_hooks() {
   fi
 }
 
-source_hooks "$BASH_HOOKS_ROOT/startup"
-source_hooks "$BASH_HOOKS_ROOT/startup-$BASH_HOOKS_PLATFORM"
+source_hooks "$SHELL_HOOKS_ROOT/startup"
+source_hooks "$SHELL_HOOKS_ROOT/startup-$SHELL_HOOKS_PLATFORM"
 
 if [[ -e "$HOME/.zshenv.backup" ]]
 then
