@@ -6,7 +6,7 @@ export BASH_HOOKS_PLATFORM=`uname`
 export BASH_HOOKS_ROOT="$HOME/.local/share/bash-hooks"
 export BASH_HOOKS_SHELL="zsh"
 
-function source_folder() {
+export function source_folder() {
   FOLDER=$1
   if [[ -e "$FOLDER" ]]
   then

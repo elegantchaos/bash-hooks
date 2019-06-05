@@ -13,7 +13,6 @@ export function source_folder() {
   then
       for f in "$FOLDER"/*
       do
-          echo "Sourcing $f"
           source "$f"
       done
   fi
