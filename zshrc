@@ -5,8 +5,8 @@
 # -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
 export BASH_HOOKS_INTERACTIVE=1
-source_folder "$BASH_HOOKS_ROOT/interactive"
-source_folder "$BASH_HOOKS_ROOT/interactive-$BASH_HOOKS_PLATFORM"
+source_hooks "$BASH_HOOKS_ROOT/interactive"
+source_hooks "$BASH_HOOKS_ROOT/interactive-$BASH_HOOKS_PLATFORM"
 
 
 if [[ -e "$HOME/.zshrc.backup" ]]

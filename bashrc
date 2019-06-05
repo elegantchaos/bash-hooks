@@ -7,7 +7,11 @@ export BASH_HOOKS_PLATFORM=`uname`
 export BASH_HOOKS_ROOT="$HOME/.local/share/bash-hooks"
 export BASH_HOOKS_SHELL="bash"
 
-export function source_path() {
+# Source a hook
+# Before sourcing, we change the working directory to the true
+# location of the hook file. This allows hooks to reference other
+# local resources just using ./my-resource
+export function source_hook() {
   absolute=$(readlink "$1")
   container=$(dirname "$absolute")
   pushd "$container" > /dev/null
@@ -15,19 +19,21 @@ export function source_path() {
   popd > /dev/null
 }
 
-export function source_folder() {
+# Source each hook in a folder.
+export function source_hooks() {
   FOLDER=$1
   if [[ -e "$FOLDER" ]]
   then
       for f in "$FOLDER"/*
       do
-          source_path $f
+          source_hook $f
       done
   fi
 }
 
-source_folder "$BASH_HOOKS_ROOT/startup"
-source_folder "$BASH_HOOKS_ROOT/startup-$BASH_HOOKS_PLATFORM"
+
+source_hooks "$BASH_HOOKS_ROOT/startup"
+source_hooks "$BASH_HOOKS_ROOT/startup-$BASH_HOOKS_PLATFORM"
 
 if [[ -e "$HOME/.bashrc.backup" ]]
 then
@@ -41,7 +47,7 @@ case $- in
 esac
 
 export BASH_HOOKS_INTERACTIVE=1
-source_folder "$BASH_HOOKS_ROOT/interactive"
-source_folder "$BASH_HOOKS_ROOT/interactive-$BASH_HOOKS_PLATFORM"
+source_hooks "$BASH_HOOKS_ROOT/interactive"
+source_hooks "$BASH_HOOKS_ROOT/interactive-$BASH_HOOKS_PLATFORM"
 
 fi
