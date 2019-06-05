@@ -12,15 +12,21 @@ export BASH_HOOKS_PLATFORM=`uname`
 export BASH_HOOKS_ROOT="$HOME/.local/share/bash-hooks"
 export BASH_HOOKS_SHELL="zsh"
 
+export function source_path() {
+  absolute=$(readlink "$1")
+  container=$(dirname "$absolute")
+  pushd "$container" > /dev/null
+  source "$absolute"
+  popd > /dev/null
+}
+
 export function source_folder() {
   FOLDER=$1
   if [[ -e "$FOLDER" ]]
   then
       for f in "$FOLDER"/*
       do
-          export SHELL_HOOKS_FOLDER=$(dirname $(readlink $f))
-          echo $SHELL_HOOKS_FOLDER
-          source "$f"
+          source_path $f
       done
   fi
 }

@@ -7,13 +7,21 @@ export BASH_HOOKS_PLATFORM=`uname`
 export BASH_HOOKS_ROOT="$HOME/.local/share/bash-hooks"
 export BASH_HOOKS_SHELL="bash"
 
+export function source_path() {
+  absolute=$(readlink "$1")
+  container=$(dirname "$absolute")
+  pushd "$container" > /dev/null
+  source "$absolute"
+  popd > /dev/null
+}
+
 export function source_folder() {
   FOLDER=$1
   if [[ -e "$FOLDER" ]]
   then
       for f in "$FOLDER"/*
       do
-          source "$f"
+          source_path $f
       done
   fi
 }
