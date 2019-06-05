@@ -1,5 +1,5 @@
 
-if [[ "$SHELL_HOOKS_RC" == "" ]]
+if [[ "$source_hook" == "" ]]
 then
 
 export SHELL_HOOKS_SHELL="bash"
@@ -36,6 +36,8 @@ function source_hooks() {
   fi
 }
 
+export -f source_hook
+export -f source_hooks
 
 source_hooks "$SHELL_HOOKS_ROOT/startup"
 source_hooks "$SHELL_HOOKS_ROOT/startup-$SHELL_HOOKS_PLATFORM"
