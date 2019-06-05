@@ -5,13 +5,15 @@ then
 export BASH_HOOKS_RC=1
 export BASH_HOOKS_PLATFORM=`uname`
 export BASH_HOOKS_ROOT="$HOME/.local/share/bash-hooks"
+export BASH_HOOKS_SHELL="bash"
 
-function source_folder() {
+export function source_folder() {
   FOLDER=$1
   if [[ -e "$FOLDER" ]]
   then
       for f in "$FOLDER"/*
       do
+          echo "Sourcing $f"
           source "$f"
       done
   fi
