@@ -1,0 +1,15 @@
+# -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+# Created by Sam Deane, 05/06/2019.
+# All code (c) 2019 - present day, Elegant Chaos Limited.
+# For licensing terms, see http://elegantchaos.com/license/liberal/.
+# -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+export BASH_HOOKS_LOGIN=1
+
+source_folder "$BASH_HOOKS_ROOT/login"
+source_folder "$BASH_HOOKS_ROOT/login-$BASH_HOOKS_PLATFORM"
+
+if [[ -e "$HOME/.zshlogin.backup" ]]
+then
+    source "$HOME/.zshlogin.backup"
+fi

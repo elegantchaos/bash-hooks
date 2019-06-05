@@ -1,3 +1,9 @@
+# -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+# Created by Sam Deane, 05/06/2019.
+# All code (c) 2019 - present day, Elegant Chaos Limited.
+# For licensing terms, see http://elegantchaos.com/license/liberal/.
+# -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
 if [[ "$BASH_HOOKS_RC" == "" ]]
 then
 
@@ -12,6 +18,8 @@ export function source_folder() {
   then
       for f in "$FOLDER"/*
       do
+          export SHELL_HOOKS_FOLDER=$(dirname $(readlink $f))
+          echo $SHELL_HOOKS_FOLDER
           source "$f"
       done
   fi
