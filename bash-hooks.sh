@@ -23,6 +23,7 @@ then
     list_hooks "login"
     list_hooks "startup"
     list_hooks "interactive"
+    list_hooks "fish"
 else
     cmd=$(basename "$0")
     echo "Usage: $cmd list"
