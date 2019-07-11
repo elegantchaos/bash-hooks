@@ -4,11 +4,11 @@
 # For licensing terms, see http://elegantchaos.com/license/liberal/.
 # -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
-if [[ "$SHELL_HOOKS_RC" == "" ]]
+
+if [[ "$SHELL_HOOKS_ZSH" == "" ]]
 then
 
-
-export SHELL_HOOKS_RC=1
+export SHELL_HOOKS_ZSH=1
 export SHELL_HOOKS_PLATFORM=`uname`
 export SHELL_HOOKS_ROOT="$HOME/.local/share/bash-hooks"
 export SHELL_HOOKS_SHELL="zsh"
