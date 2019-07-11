@@ -15,4 +15,4 @@ Similar to bash, but replacing the equivalent .zsh* files.
 
 ### FISH
 
-Similar to bash, but replacing the equivalent fish files.
+Similar to bash, but adds a fish config file.
