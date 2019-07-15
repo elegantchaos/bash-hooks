@@ -6,14 +6,14 @@ let package = Package(
     name: "shell-hooks",
     products: [
         .executable(
-            name: "shell-hooks-xpg",
-            targets: ["shell-hooks-xpg"]),
+            name: "shell-hooks-xpkg",
+            targets: ["shell-hooks-xpkg"]),
     ],
     dependencies: [
     ],
     targets: [
         .target(
-            name: "shell-hooks-xpg",
+            name: "shell-hooks-xpkg",
             dependencies: []),
     ]
 )
