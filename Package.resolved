@@ -1,0 +1,70 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "Arguments",
+        "repositoryURL": "https://github.com/elegantchaos/Arguments.git",
+        "state": {
+          "branch": null,
+          "revision": "e17c144eb00b6d9e500c34eb09de265add523de2",
+          "version": "1.1.0"
+        }
+      },
+      {
+        "package": "Builder",
+        "repositoryURL": "https://github.com/elegantchaos/Builder.git",
+        "state": {
+          "branch": null,
+          "revision": "71f5ac1a13a7825268bd4c8a21515d63c6e4001c",
+          "version": "1.1.1"
+        }
+      },
+      {
+        "package": "BuilderConfiguration",
+        "repositoryURL": "https://github.com/elegantchaos/BuilderConfiguration.git",
+        "state": {
+          "branch": null,
+          "revision": "560f557d88437a724b9d548cf57d11e066d0d08b",
+          "version": "1.1.3"
+        }
+      },
+      {
+        "package": "Docopt",
+        "repositoryURL": "https://github.com/elegantchaos/docopt.swift.git",
+        "state": {
+          "branch": null,
+          "revision": "fa71fca4b4e7411c70a21ef89256cd04a64c6dda",
+          "version": "0.6.11"
+        }
+      },
+      {
+        "package": "Logger",
+        "repositoryURL": "https://github.com/elegantchaos/Logger.git",
+        "state": {
+          "branch": null,
+          "revision": "c101ca48876adabeb25848f5fe0efba748c24d73",
+          "version": "1.3.7"
+        }
+      },
+      {
+        "package": "Runner",
+        "repositoryURL": "https://github.com/elegantchaos/Runner.git",
+        "state": {
+          "branch": null,
+          "revision": "292c94f8613ddd72d45f3bb1f503dceec3b83e44",
+          "version": "1.0.3"
+        }
+      },
+      {
+        "package": "XPkg",
+        "repositoryURL": "https://github.com/elegantchaos/XPkg",
+        "state": {
+          "branch": null,
+          "revision": "937ef2b0d59c22388fd109c93124f29aef357adb",
+          "version": "2.0.0"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
