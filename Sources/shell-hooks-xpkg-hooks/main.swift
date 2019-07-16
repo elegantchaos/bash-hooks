@@ -3,7 +3,7 @@ import XPkgAPI
 let links = [
     ["bashrc", "~/.bashrc"],
     ["bash_profile", "~/.bash_profile"],
-    ["bash-hooks.sh", "~/.local/bin/hooks"],
+    ["shell-hooks.sh", "~/.local/bin/hooks"],
     ["zshenv", "~/.zshenv"],
     ["zshrc", "~/.zshrc"],
     ["zshlogin", "~/.zshlogin"],

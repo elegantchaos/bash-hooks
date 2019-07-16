@@ -5,12 +5,12 @@ then
 export SHELL_HOOKS_SHELL="bash"
 export SHELL_HOOKS_RC=1
 export SHELL_HOOKS_PLATFORM=`uname`
-export SHELL_HOOKS_ROOT="$HOME/.local/share/bash-hooks"
+export SHELL_HOOKS_ROOT="$HOME/.local/share/shell-hooks"
 
 # legacy
 export BASH_HOOKS_RC=1
 export BASH_HOOKS_PLATFORM=`uname`
-export BASH_HOOKS_ROOT="$HOME/.local/share/bash-hooks"
+export BASH_HOOKS_ROOT="$HOME/.local/share/shell-hooks"
 
 # Source a hook
 # Before sourcing, we change the working directory to the true

@@ -2,7 +2,7 @@ If installed with [xpkg](https://github.com/elegantchaos/xpkg), this package hoo
 
 ### BASH
 
-It replaces the existing bashrc and bash_profile with versions that scan the `~/.config/bash-hooks/startup/` and `~/.config/bash-hooks/login/` folders, and source anything
+It replaces the existing bashrc and bash_profile with versions that scan the `~/.config/shell-hooks/startup/` and `~/.config/shell-hooks/login/` folders, and source anything
 that they find in there.
 
 They then execute the original `bashrc` and/or `bash_profile` files, which will have been backed up as `~/.bashrc.backup` and `~/.bash_profile.backup` respectively.

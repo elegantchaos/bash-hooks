@@ -1,7 +1,7 @@
 set -x SHELL_HOOKS_SHELL fish
 set -x SHELL_HOOKS_RC 1
 set -x SHELL_HOOKS_PLATFORM (uname)
-set -x SHELL_HOOKS_ROOT "$HOME/.local/share/bash-hooks"
+set -x SHELL_HOOKS_ROOT "$HOME/.local/share/shell-hooks"
 set -x SHELL_HOOKS_INTERACTIVE 1
 
 # Source a hook
