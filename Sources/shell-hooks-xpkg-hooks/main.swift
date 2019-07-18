@@ -1,4 +1,4 @@
-import XPkgAPI
+import XPkgPackage
 
 let links = [
     ["bashrc", "~/.bashrc"],
