@@ -13,7 +13,7 @@ let package = Package(
             targets: ["shell-hooks-xpkg-hooks"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/elegantchaos/XPkgPackage", from:"1.0.1"),
+        .package(url: "https://github.com/elegantchaos/XPkgPackage", from:"1.0.2"),
     ],
     targets: [
         .target(
